@@ -10,7 +10,6 @@ Welcome to **JSmap**, the black‑hat hacker’s dream CLI scanner. Designed to 
 
 ## 🛠 Some test
 ![JSmap one](photo1.png)
-![JSmap two](photo2.png)
 ![JSmap 3](photo3.png)
 
 > “Try it XD”
