@@ -1,0 +1,7 @@
+tld
+fuzzywuzzy
+requests
+beautifulsoup4
+rich
+urllib3
+retirejs
