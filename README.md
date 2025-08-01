@@ -1,12 +1,19 @@
 # ![JSmap Logo](logo.png)
 
-# ![JSmap Logo](photo1.png)
-
 # JSmap - The Ultimate Recon & XSS Toolkit
 
 Welcome to **JSmap**, the black‑hat hacker’s dream CLI scanner. Designed to be lightning‑fast, deeply intelligent, and outrageously configurable, JSmap will make you feel like a wizard on your first pentest.
 
 > “This tool is so wicked, it feels like... black magic.”
+
+---
+
+## 🛠 Some test
+![JSmap one](photo1.png)
+![JSmap two](photo2.png)
+![JSmap 3](photo3.png)
+
+> “Try it XD”
 
 ---
 
