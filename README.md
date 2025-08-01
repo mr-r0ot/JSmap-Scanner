@@ -57,7 +57,7 @@ pip install -r requirements.txt
 Basic scan (all defaults, random UA, 20 threads):
 
 ```bash
-python JSmap.py -u https://sabzlearn.ir
+python JSmap.py -u https://target.com
 ```
 
 ### Command‑Line Options
