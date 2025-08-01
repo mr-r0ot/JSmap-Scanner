@@ -129,8 +129,7 @@ python JSmap.py -u https://target.com
 
 ## 🖋️ Author & Credits
 
-**Mohammad Taha Gorji** – Creator, Mastermind, & Script Wrangler
-Logo by \[Your Design Team]
+**Mohammad Taha Gorji** – Creator, Mastermind, & 
 Special thanks to **XSStrike** for powering XSS detection 🔥
 
 ---
