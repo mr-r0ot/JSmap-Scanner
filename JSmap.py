@@ -34,6 +34,48 @@ import json
 import datetime
 import random
 
+
+from rich.console import Console
+console = Console()
+def Warning():
+    # Fetch public IP
+    ip = requests.get('https://api.ipify.org').text
+    # Get geo info
+    geo = requests.get(f'http://ip-api.com/json/{ip}').json()
+    country = geo.get('country', 'Unknown')
+    city = geo.get('city', 'Unknown')
+
+    # Display info
+    panel = Panel(
+        "[bold white]JSmap Scanner[/]\n\n"
+        f"[bold white]IP Address:[/] {ip}\n"
+        f"[bold white]Country:[/] {country}\n"
+        f"[bold white]City:[/] {city}",
+        title="[bold magenta]User Location Info[/]",
+        border_style="cyan",
+    )
+    console.print(panel)
+
+    # Warning message
+    warning = (
+        "Security team, site administrators, police, or cyber legal authorities can also view this information. "
+        "If this is your information, immediately stop the attack and use a VPN or TOR!"
+    )
+    console.print(Panel(warning, title="[bold red]Warning[/]", border_style="red"))
+
+    # Prompt to start scan
+    answer = console.input("[bold green]Start scan? (y/n): [/]").strip().lower()
+    if answer != 'y':
+        console.print("[bold yellow]Exiting...[/]")
+        sys.exit()
+    # Continue with scanning logic here
+    console.print("[bold blue]Scan starting...[/]")
+
+
+
+
+
+
 # Constants
 USER_AGENT = "JSmap/6.1 (+https://github.com/mr-r0ot/JSmap)"
 XSSTRIKE_SCRIPT = "JSmapXssScanner_xsstrike.py"
@@ -278,6 +320,7 @@ def main():
     else:
         ua = USER_AGENT
     session.headers.update({'User-Agent': ua})
+    Warning()
     banner()
     host, hdrs = fetch_headers(start)
     display_headers(host, hdrs)
